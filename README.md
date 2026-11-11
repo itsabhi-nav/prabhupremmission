@@ -26,6 +26,7 @@ Requires Node 20+.
 | `/initiatives` | All six seva initiatives with category filters |
 | `/initiatives/[slug]` | Initiative detail — prose, quote, gallery, related initiative |
 | `/darshan` | Daily Dham Darshan — today, last 7 days and a 30-day archive with month filters and lightbox |
+| `/shloka` | Shloka of the day, the full bilingual collection, theme filters and a japa counter |
 | `/gyan` | Publications, PDF downloads and newsletter |
 | `/donate` | Donation form, UPI QR, bank details and Gupta Daan |
 | `/contact` | Contact form, visit details and social links |
@@ -48,6 +49,24 @@ The file is fully typed. Replace the values there (or swap the module for a CMS)
 without touching the UI. Darshan dates are generated relative to the current day
 in `src/lib/darshan.ts`; the most recent seven days are shown on the home page
 and thirty days in the archive.
+
+### Shlokas
+
+The verses live in their own file:
+
+```
+src/content/shlokas.ts
+```
+
+Each entry carries four layers — `deva` (Devanagari), `iast` (transliteration),
+`gloss` (word-by-word) and `meaning` (English). `src/lib/shloka.ts` picks the
+verse of the day deterministically, so the same verse shows all day. Add a
+verse by appending to the `shlokas` array — the themes, filters, copy button
+and the daily pick all follow automatically.
+
+> The English renderings are working translations prepared for the interface.
+> Cross-check every verse against a published edition before printing or
+> distributing it.
 
 ### Design tokens
 
@@ -79,6 +98,13 @@ placeholder and is labelled as such in the interface where appropriate:
    Until then the modal links to the channel.
 8. **Darshan archive** — the image set in `src/lib/darshan.ts` repeats a small
    set of placeholder photographs. Replace with a daily archive (or CMS).
+9. **Shloka translations** — the English renderings in
+   `src/content/shlokas.ts` are working translations. Have them checked
+   against a published edition, and replace the `note` lines with the
+   mission's own commentary.
+10. **The fivefold path** — `pathSteps` in `src/content/site.ts` presents a
+    classical Vedāntic framework. Keep the attribution line, or replace the
+    section with the mission's own framing.
 
 ## Donation behaviour
 
@@ -105,8 +131,8 @@ src/
   components/     layout, motion, forms, page sections
     home/         homepage sections
     ui/           buttons and small primitives
-  content/site.ts all editable content
-  lib/            darshan dates, formatting, class helpers
+  content/        site.ts (all editable copy) + shlokas.ts (verses)
+  lib/            darshan dates, shloka helpers, formatting, class helpers
 public/
   images/         placeholder photography + CREDITS.md
   gyan/           placeholder PDFs

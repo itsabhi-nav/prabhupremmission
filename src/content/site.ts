@@ -33,8 +33,9 @@ export const site = {
 export const nav = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
-  { label: "Our Initiatives", href: "/initiatives" },
-  { label: "Dham Darshan", href: "/darshan" },
+  { label: "Initiatives", href: "/initiatives" },
+  { label: "Darshan", href: "/darshan" },
+  { label: "Shloka", href: "/shloka" },
   { label: "Gyan", href: "/gyan" },
   { label: "Contact", href: "/contact" },
 ];
@@ -112,6 +113,58 @@ export const darshanSection = {
   intro:
     "Flowers, lamps and the morning aarti — the last seven days at the Dham, gathered in one quiet place.",
   cta: { label: "View all Darshan", href: "/darshan" },
+};
+
+/**
+ * The fivefold path of the seeker — a classical Vedāntic framework, after
+ * Śaṅkarācārya's Upadeśa Sāram. Presented as tradition, not as the
+ * mission's own doctrine.
+ */
+export const pathSteps = [
+  {
+    number: "I",
+    deva: "श्रवण",
+    name: "Śravaṇa",
+    gloss: "Hearing",
+    body: "To hear the truth once, from a living voice — and to hear it without arguing.",
+  },
+  {
+    number: "II",
+    deva: "मनन",
+    name: "Manana",
+    gloss: "Reflection",
+    body: "To turn it over, to test it against what is already known, to let it be questioned.",
+  },
+  {
+    number: "III",
+    deva: "निदिध्यासन",
+    name: "Nididhyasana",
+    gloss: "Deepening",
+    body: "To sit with it, day after day, until it stops being an idea and starts being a way of seeing.",
+  },
+  {
+    number: "IV",
+    deva: "अनुभव",
+    name: "Anubhava",
+    gloss: "Experience",
+    body: "To taste it rather than merely know it — the point where the teaching and the life meet.",
+  },
+  {
+    number: "V",
+    deva: "आनन्द",
+    name: "Ānanda",
+    gloss: "Joy",
+    body: "To rest in what remains, when nothing more is needed and nothing more is missing.",
+  },
+];
+
+export const pathSection = {
+  eyebrow: "The Path",
+  title: "Five steps, taken in order.",
+  intro:
+    "The tradition does not promise shortcuts. It describes a sequence — and asks only that each step be walked rather than skipped.",
+  source: "A classical Vedāntic framework, after Śaṅkarācārya's Upadeśa Sāram.",
+  cta: { label: "Read the Gyan", href: "/gyan" },
 };
 
 export const initiativesSection = {

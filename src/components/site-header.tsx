@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion, useScroll } from "framer-motion";
 import { ArrowUpRight, Menu, X } from "lucide-react";
 import { nav, site } from "@/content/site";
 import { cn } from "@/lib/utils";
@@ -16,6 +16,7 @@ export function SiteHeader() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const [activePath, setActivePath] = useState(pathname);
+  const { scrollYProgress } = useScroll();
   const lightHero = !overrideDarkPaths.some((path) => pathname.startsWith(path));
   const solid = scrolled || !lightHero;
 
@@ -61,7 +62,7 @@ export function SiteHeader() {
 
           <nav
             aria-label="Primary"
-            className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-7 lg:flex xl:gap-9"
+            className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-5 lg:flex xl:gap-8"
           >
             {nav.map((item) => {
               const active =
@@ -114,6 +115,13 @@ export function SiteHeader() {
             </button>
           </div>
         </div>
+
+        {/* scroll progress */}
+        <motion.div
+          aria-hidden
+          style={{ scaleX: scrollYProgress }}
+          className="absolute inset-x-0 bottom-0 h-px origin-left bg-gradient-to-r from-saffron via-gold to-saffron/40"
+        />
       </header>
 
       <AnimatePresence>

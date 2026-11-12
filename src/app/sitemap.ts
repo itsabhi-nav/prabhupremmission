@@ -10,6 +10,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/initiatives", priority: 0.9, changeFrequency: "monthly" as const },
     { path: "/darshan", priority: 0.9, changeFrequency: "daily" as const },
     { path: "/shloka", priority: 0.8, changeFrequency: "daily" as const },
+    { path: "/utsav", priority: 0.8, changeFrequency: "weekly" as const },
+    { path: "/sankalpa", priority: 0.7, changeFrequency: "monthly" as const },
     { path: "/gyan", priority: 0.8, changeFrequency: "monthly" as const },
     { path: "/donate", priority: 0.8, changeFrequency: "monthly" as const },
     { path: "/contact", priority: 0.7, changeFrequency: "yearly" as const },

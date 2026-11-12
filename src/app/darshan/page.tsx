@@ -27,7 +27,7 @@ export default function DarshanPage() {
         meta="Updated each morning"
         title={
           <>
-            A glimpse of the Dham, <span className="italic text-gold">every day.</span>
+            A glimpse of the Dham, every day.
           </>
         }
         intro={darshanSection.intro}
@@ -50,7 +50,7 @@ export default function DarshanPage() {
                     sizes="(min-width: 1024px) 58vw, 100vw"
                     className="img-warm object-cover"
                   />
-                  <span className="absolute left-4 top-4 flex items-center gap-2 bg-ivory/92 px-3 py-2 text-[0.52rem] uppercase tracking-[0.2em] text-charcoal/70 backdrop-blur">
+                  <span className="absolute left-4 top-4 flex items-center gap-2 bg-ivory/92 px-3 py-2 text-[0.7rem] tracking-[0.01em] text-charcoal/70 backdrop-blur">
                     <span className="h-1.5 w-1.5 rounded-full bg-saffron" />
                     Today
                   </span>
@@ -60,11 +60,11 @@ export default function DarshanPage() {
                     <p className="font-display text-xl leading-tight">
                       {today.caption}
                     </p>
-                    <p className="mt-1 text-sm font-light text-charcoal/50">
+                    <p className="mt-1 text-sm font-normal text-charcoal/50">
                       {today.note}
                     </p>
                   </div>
-                  <p className="shrink-0 text-[0.56rem] uppercase tracking-[0.2em] text-charcoal/35">
+                  <p className="shrink-0 text-[0.7rem] tracking-[0.01em] text-charcoal/35">
                     {today.dateLabel}
                   </p>
                 </div>
@@ -75,11 +75,11 @@ export default function DarshanPage() {
               <SectionLabel>Today at the Dham</SectionLabel>
               <Reveal delay={0.08}>
                 <div className="mt-8 flex items-start gap-6 border-b border-line pb-7">
-                  <p className="font-sans text-[4.6rem] font-light leading-[0.8] tracking-[-0.06em] text-charcoal">
+                  <p className="font-sans text-[4.6rem] font-normal leading-[0.8] tracking-[-0.06em] text-charcoal">
                     {today.day}
                   </p>
                   <div className="pt-2">
-                    <p className="text-[0.6rem] uppercase tracking-[0.2em] text-charcoal/45">
+                    <p className="text-[0.8rem] tracking-[0.01em] text-charcoal/45">
                       {today.weekday}
                     </p>
                     <p className="mt-1 font-display text-2xl leading-tight">
@@ -105,14 +105,14 @@ export default function DarshanPage() {
                         sizes="120px"
                         className="img-warm object-cover"
                       />
-                      <span className="absolute bottom-1.5 left-2 text-[0.48rem] uppercase tracking-wider text-ivory drop-shadow">
+                      <span className="absolute bottom-1.5 left-2 text-[0.8rem] tracking-[0.01em] text-ivory drop-shadow">
                         {entry.day}
                       </span>
                     </div>
                   ))}
                 </div>
 
-                <p className="mt-6 text-[0.56rem] uppercase leading-relaxed tracking-[0.18em] text-charcoal/35">
+                <p className="mt-6 text-[0.7rem] leading-relaxed tracking-[0.01em] text-charcoal/35">
                   Photography is offered as a placeholder for the mission&apos;s
                   own daily darshan archive.
                 </p>

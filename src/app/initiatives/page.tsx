@@ -26,7 +26,7 @@ export default function InitiativesPage() {
         meta="Seva · In action"
         title={
           <>
-            Service, in its <span className="italic text-gold">many forms.</span>
+            Service, in its many forms.
           </>
         }
         intro={initiativesSection.intro}
@@ -54,7 +54,7 @@ export default function InitiativesPage() {
             </Link>
 
             <div className="flex flex-col justify-center lg:col-span-4 lg:col-start-9">
-              <p className="text-[0.56rem] uppercase tracking-[0.22em] text-charcoal/40">
+              <p className="text-[0.7rem] tracking-[0.01em] text-charcoal/40">
                 {featured.category} · {formatDate(featured.date)}
               </p>
               <h2 className="display-2 mt-4 transition-colors duration-500 group-hover:text-saffron">
@@ -66,7 +66,7 @@ export default function InitiativesPage() {
               <p className="body-base mt-5 text-charcoal/60">{featured.intro}</p>
               <Link
                 href={`/initiatives/${featured.slug}`}
-                className="group mt-7 inline-flex w-fit items-center gap-2 text-[0.62rem] font-medium uppercase tracking-[0.2em] text-charcoal/70 transition-colors duration-500 hover:text-charcoal"
+                className="group mt-7 inline-flex w-fit items-center gap-2 text-[0.8rem] font-medium tracking-[0.01em] text-charcoal/70 transition-colors duration-500 hover:text-charcoal"
               >
                 <span className="link-underline pb-1">Read the full story</span>
                 <ArrowUpRight
@@ -95,7 +95,7 @@ export default function InitiativesPage() {
           <InitiativesIndex items={rest} />
 
           <div className="mt-20 flex flex-col items-start justify-between gap-6 border-t border-line pt-8 sm:flex-row sm:items-center">
-            <p className="max-w-md text-sm font-light leading-relaxed text-charcoal/50">
+            <p className="max-w-md text-sm font-normal leading-relaxed text-charcoal/50">
               Every initiative is small on purpose. If one of them speaks to
               you, write to us — there is always room for another pair of hands.
             </p>

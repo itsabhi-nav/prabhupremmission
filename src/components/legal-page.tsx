@@ -19,7 +19,7 @@ export function LegalPage({
       <div className="container-x">
         <Link
           href="/"
-          className="group inline-flex items-center gap-2 text-[0.58rem] uppercase tracking-[0.2em] text-charcoal/40 transition-colors duration-500 hover:text-charcoal"
+          className="group inline-flex items-center gap-2 text-[0.7rem] tracking-[0.01em] text-charcoal/40 transition-colors duration-500 hover:text-charcoal"
         >
           <ArrowLeft
             className="h-3.5 w-3.5 transition-transform duration-500 group-hover:-translate-x-1"
@@ -31,7 +31,7 @@ export function LegalPage({
         <header className="mt-12 grid gap-8 border-b border-line pb-12 lg:grid-cols-12">
           <div className="lg:col-span-4">
             <SectionLabel>Legal</SectionLabel>
-            <p className="mt-4 text-[0.58rem] uppercase tracking-[0.18em] text-charcoal/35">
+            <p className="mt-4 text-[0.7rem] tracking-[0.01em] text-charcoal/35">
               {updated}
             </p>
           </div>
@@ -44,7 +44,7 @@ export function LegalPage({
         <div className="grid gap-12 py-14 md:py-20 lg:grid-cols-12 lg:gap-10">
           <aside className="lg:col-span-3">
             <div className="lg:sticky lg:top-32">
-              <p className="text-[0.56rem] uppercase tracking-[0.22em] text-charcoal/35">
+              <p className="text-[0.7rem] tracking-[0.01em] text-charcoal/35">
                 On this page
               </p>
               <ul className="mt-4 space-y-2.5">
@@ -52,9 +52,9 @@ export function LegalPage({
                   <li key={section.title}>
                     <a
                       href={`#section-${index + 1}`}
-                      className="group flex items-baseline gap-3 text-sm font-light text-charcoal/55 transition-colors duration-500 hover:text-charcoal"
+                      className="group flex items-baseline gap-3 text-sm font-normal text-charcoal/55 transition-colors duration-500 hover:text-charcoal"
                     >
-                      <span className="font-display text-xs italic text-saffron/70">
+                      <span className="text-[0.7rem] font-medium text-saffron/70">
                         0{index + 1}
                       </span>
                       {section.title}
@@ -74,7 +74,7 @@ export function LegalPage({
                   className="scroll-mt-32 border-t border-line pt-8 first:border-t-0 first:pt-0"
                 >
                   <div className="flex items-baseline gap-4">
-                    <span className="font-display text-sm italic text-saffron">
+                    <span className="text-[0.8rem] font-medium text-saffron">
                       0{index + 1}
                     </span>
                     <h2 className="font-display text-2xl leading-tight sm:text-3xl">
@@ -89,7 +89,7 @@ export function LegalPage({
             </div>
 
             <div className="mt-14 border-t border-line pt-8">
-              <p className="text-sm font-light leading-relaxed text-charcoal/50">
+              <p className="text-sm font-normal leading-relaxed text-charcoal/50">
                 Questions about this page can be sent to{" "}
                 <a
                   href={`mailto:${site.email}`}

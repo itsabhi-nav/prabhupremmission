@@ -18,12 +18,7 @@ export default function AboutPage() {
     <>
       <PageHero
         eyebrow="About the Mission"
-        meta="Bharat · India"
-        title={
-          <>
-            A life shaped by <span className="italic text-gold">remembrance.</span>
-          </>
-        }
+        title="A life shaped by remembrance."
         intro={aboutPage.intro}
         image={aboutPage.heroImage}
         alt={aboutPage.heroImageAlt}
@@ -34,21 +29,6 @@ export default function AboutPage() {
         <div className="container-x grid gap-12 lg:grid-cols-12 lg:gap-10">
           <div className="lg:col-span-4">
             <SectionLabel>Who we are</SectionLabel>
-            <p
-              aria-hidden
-              className="mt-10 font-deva text-[8rem] leading-none text-saffron/15"
-            >
-              प्रेम
-            </p>
-            <div className="mt-8 hidden border-t border-line pt-5 lg:block">
-              <p className="text-[0.58rem] uppercase leading-relaxed tracking-[0.2em] text-charcoal/40">
-                A spiritual mission
-                <br />
-                in the living tradition
-                <br />
-                of Indian bhakti.
-              </p>
-            </div>
           </div>
 
           <div className="lg:col-span-8">
@@ -67,11 +47,8 @@ export default function AboutPage() {
               <div className="grid gap-6 border-t border-line pt-8 sm:grid-cols-3">
                 {principles.map((principle) => (
                   <div key={principle.number}>
-                    <p className="font-display text-sm italic text-saffron">
-                      {principle.number}
-                    </p>
-                    <p className="mt-2 font-display text-2xl">{principle.title}</p>
-                    <p className="mt-2 text-xs font-light leading-relaxed text-charcoal/50">
+                    <p className="font-display text-2xl">{principle.title}</p>
+                    <p className="mt-2 text-[0.88rem] font-normal leading-relaxed text-charcoal/55">
                       {principle.description}
                     </p>
                   </div>
@@ -93,9 +70,8 @@ export default function AboutPage() {
               imageClassName="img-warm"
               strength={50}
             />
-            <div className="mt-4 flex justify-between gap-6 text-[0.56rem] uppercase tracking-[0.2em] text-charcoal/40">
-              <span>A quiet courtyard at the Dham</span>
-              <span className="hidden sm:block">Placeholder photography</span>
+            <div className="mt-4 text-[0.82rem] text-charcoal/40">
+              A quiet courtyard at the Dham
             </div>
           </Reveal>
         </div>
@@ -123,10 +99,10 @@ export default function AboutPage() {
                     className="grid gap-6 border-b border-line py-10 sm:grid-cols-[100px_1fr] md:py-12"
                   >
                     <div>
-                      <p className="font-display text-sm italic text-saffron">
+                      <p className="text-[0.8rem] font-medium text-saffron">
                         0{index + 1}
                       </p>
-                      <p className="mt-2 text-[0.56rem] uppercase tracking-[0.2em] text-charcoal/40">
+                      <p className="mt-2 text-[0.7rem] tracking-[0.01em] text-charcoal/40">
                         {chapter.chapter}
                       </p>
                     </div>
@@ -153,10 +129,8 @@ export default function AboutPage() {
                   className="img-warm object-cover"
                 />
               </div>
-              <p className="mt-4 text-[0.56rem] uppercase leading-relaxed tracking-[0.18em] text-charcoal/40">
+              <p className="mt-4 text-[0.82rem] text-charcoal/40">
                 Stone remembers what the world forgets.
-                <br />
-                Placeholder photography.
               </p>
             </Reveal>
           </div>
@@ -189,13 +163,10 @@ export default function AboutPage() {
                         sizes="(min-width: 1024px) 22vw, 80vw"
                         className="img-warm-deep object-cover object-[50%_35%]"
                       />
-                      <span className="absolute bottom-3 left-3 right-3 text-[0.5rem] uppercase leading-relaxed tracking-[0.16em] text-ivory/70">
-                        Representative image
-                      </span>
                     </div>
                   </div>
                   <div>
-                    <p className="text-[0.56rem] uppercase tracking-[0.22em] text-charcoal/40">
+                    <p className="text-[0.7rem] tracking-[0.01em] text-charcoal/40">
                       {person.role}
                     </p>
                     <h3 className="mt-3 font-display text-3xl leading-tight">
@@ -205,7 +176,7 @@ export default function AboutPage() {
                       {person.body.map((paragraph) => (
                         <p
                           key={paragraph}
-                          className="text-sm font-light leading-relaxed text-charcoal/55"
+                          className="text-sm font-normal leading-relaxed text-charcoal/55"
                         >
                           {paragraph}
                         </p>
@@ -219,9 +190,8 @@ export default function AboutPage() {
 
           <Reveal className="mt-16 border-t border-line pt-6">
             <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
-              <p className="max-w-xl font-display text-xl italic leading-relaxed text-charcoal/60">
-                &ldquo;{mission.sanskritMeaning}&rdquo; — a blessing the mission
-                returns to often.
+              <p className="max-w-xl font-deva text-xl leading-relaxed text-charcoal/70" lang="sa">
+                {mission.sanskrit}
               </p>
               <ArrowLink href="/initiatives">See our seva</ArrowLink>
             </div>
@@ -234,7 +204,7 @@ export default function AboutPage() {
           <div className="lg:col-span-8">
             <SectionLabel light>Walk with us</SectionLabel>
             <h2 className="display-1 mt-6 max-w-2xl text-balance">
-              The door is open. <span className="italic text-gold">Come as you are.</span>
+              The door is open. Come as you are.
             </h2>
             <p className="body-lg mt-6 max-w-lg text-ivory/55">
               Whether you come to sit in silence, to serve, or simply to

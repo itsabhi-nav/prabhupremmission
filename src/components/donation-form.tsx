@@ -38,7 +38,7 @@ function CopyField({
   return (
     <div className="flex items-center justify-between gap-4 border-b border-line py-3.5">
       <div className="min-w-0">
-        <p className="text-[0.54rem] uppercase tracking-[0.2em] text-charcoal/35">
+        <p className="text-[0.7rem] tracking-[0.01em] text-charcoal/35">
           {label}
         </p>
         <p
@@ -122,7 +122,7 @@ export function DonationForm() {
           >
             <div className="flex items-start justify-between gap-4 border-b border-line pb-5">
               <div>
-                <p className="text-[0.56rem] uppercase tracking-[0.22em] text-charcoal/40">
+                <p className="text-[0.7rem] tracking-[0.01em] text-charcoal/40">
                   Offering details
                 </p>
                 <h2 className="mt-2 font-display text-3xl">Make a contribution</h2>
@@ -133,7 +133,7 @@ export function DonationForm() {
             </div>
 
             <fieldset className="mt-8">
-              <legend className="text-[0.56rem] uppercase tracking-[0.22em] text-charcoal/45">
+              <legend className="text-[0.7rem] tracking-[0.01em] text-charcoal/45">
                 Amount (INR)
               </legend>
               <div className="mt-4 flex flex-wrap gap-2.5">
@@ -146,7 +146,7 @@ export function DonationForm() {
                       setError("");
                     }}
                     className={cn(
-                      "rounded-full border px-5 py-2.5 text-sm transition-all duration-400",
+                      "rounded-[2px] border px-5 py-2.5 text-sm transition-colors duration-300",
                       amount === preset
                         ? "border-charcoal bg-charcoal text-ivory"
                         : "border-charcoal/20 text-charcoal/70 hover:border-charcoal/50",
@@ -159,7 +159,7 @@ export function DonationForm() {
                   type="button"
                   onClick={() => setAmount("custom")}
                   className={cn(
-                    "rounded-full border px-5 py-2.5 text-sm transition-all duration-400",
+                    "rounded-[2px] border px-5 py-2.5 text-sm transition-colors duration-300",
                     amount === "custom"
                       ? "border-charcoal bg-charcoal text-ivory"
                       : "border-charcoal/20 text-charcoal/70 hover:border-charcoal/50",
@@ -178,7 +178,7 @@ export function DonationForm() {
                     className="overflow-hidden"
                   >
                     <label className="mt-5 block">
-                      <span className="text-[0.56rem] uppercase tracking-[0.2em] text-charcoal/40">
+                      <span className="text-[0.7rem] tracking-[0.01em] text-charcoal/40">
                         Enter an amount
                       </span>
                       <div className="mt-1 flex items-baseline gap-2 border-b border-charcoal/25 pb-1 focus-within:border-saffron">
@@ -194,7 +194,7 @@ export function DonationForm() {
                             setError("");
                           }}
                           placeholder="2,100"
-                          className="w-full bg-transparent py-1 text-2xl font-light text-charcoal outline-none placeholder:text-charcoal/25"
+                          className="w-full bg-transparent py-1 text-2xl font-normal text-charcoal outline-none placeholder:text-charcoal/25"
                           autoFocus
                         />
                       </div>
@@ -206,7 +206,7 @@ export function DonationForm() {
 
             <div className="mt-8 grid gap-6 sm:grid-cols-2">
               <label className="block">
-                <span className="text-[0.56rem] uppercase tracking-[0.2em] text-charcoal/45">
+                <span className="text-[0.7rem] tracking-[0.01em] text-charcoal/45">
                   Full name
                 </span>
                 <input
@@ -223,7 +223,7 @@ export function DonationForm() {
               </label>
 
               <label className="block">
-                <span className="text-[0.56rem] uppercase tracking-[0.2em] text-charcoal/45">
+                <span className="text-[0.7rem] tracking-[0.01em] text-charcoal/45">
                   Email address
                 </span>
                 <input
@@ -240,7 +240,7 @@ export function DonationForm() {
               </label>
 
               <label className="block">
-                <span className="text-[0.56rem] uppercase tracking-[0.2em] text-charcoal/45">
+                <span className="text-[0.7rem] tracking-[0.01em] text-charcoal/45">
                   Phone <span className="normal-case tracking-normal">(optional)</span>
                 </span>
                 <input
@@ -254,7 +254,7 @@ export function DonationForm() {
               </label>
 
               <label className="block">
-                <span className="text-[0.56rem] uppercase tracking-[0.2em] text-charcoal/45">
+                <span className="text-[0.7rem] tracking-[0.01em] text-charcoal/45">
                   Direct my offering to
                 </span>
                 <select
@@ -289,7 +289,7 @@ export function DonationForm() {
                 <span className="block text-sm text-charcoal/80">
                   Offer this as Gupta Daan
                 </span>
-                <span className="mt-0.5 block text-xs font-light leading-relaxed text-charcoal/45">
+                <span className="mt-0.5 block text-xs font-normal leading-relaxed text-charcoal/45">
                   Your name will be kept private and your offering will not be
                   listed anywhere.
                 </span>
@@ -321,7 +321,7 @@ export function DonationForm() {
               />
             </button>
 
-            <p className="mt-4 text-center text-[0.62rem] font-light leading-relaxed text-charcoal/40">
+            <p className="mt-4 text-center text-[0.8rem] font-normal leading-relaxed text-charcoal/40">
               This form does not take a payment. The mission&rsquo;s bank and UPI
               details are shown on the next step.
             </p>
@@ -337,21 +337,21 @@ export function DonationForm() {
           >
             <div className="flex flex-wrap items-start justify-between gap-4 border-b border-line p-6 sm:p-9">
               <div>
-                <p className="text-[0.56rem] uppercase tracking-[0.22em] text-saffron">
+                <p className="text-[0.7rem] tracking-[0.01em] text-saffron">
                   One more step
                 </p>
                 <h2 className="mt-2 font-display text-3xl">
                   Complete your offering of ₹
                   {resolvedAmount.toLocaleString("en-IN")}
                 </h2>
-                <p className="mt-2 text-sm font-light text-charcoal/55">
+                <p className="mt-2 text-sm font-normal text-charcoal/55">
                   {privateOffering ? "Gupta Daan · " : ""}Directed to {purpose}
                 </p>
               </div>
               <button
                 type="button"
                 onClick={() => setRevealed(false)}
-                className="text-[0.58rem] uppercase tracking-[0.18em] text-charcoal/40 underline decoration-charcoal/20 underline-offset-4 transition-colors duration-500 hover:text-charcoal"
+                className="text-[0.7rem] tracking-[0.01em] text-charcoal/40 underline decoration-charcoal/20 underline-offset-4 transition-colors duration-500 hover:text-charcoal"
               >
                 Edit details
               </button>
@@ -359,7 +359,7 @@ export function DonationForm() {
 
             <div className="grid gap-8 p-6 sm:p-9 lg:grid-cols-[0.9fr_1.1fr] lg:gap-10">
               <div>
-                <p className="text-[0.56rem] uppercase tracking-[0.22em] text-charcoal/40">
+                <p className="text-[0.7rem] tracking-[0.01em] text-charcoal/40">
                   Scan to pay via UPI
                 </p>
                 <div className="mt-4 inline-block border border-line bg-white p-3">
@@ -372,7 +372,7 @@ export function DonationForm() {
                     unoptimized
                   />
                 </div>
-                <p className="mt-4 text-xs font-light leading-relaxed text-charcoal/45">
+                <p className="mt-4 text-xs font-normal leading-relaxed text-charcoal/45">
                   Works with any UPI app. The QR is a placeholder until the
                   mission&rsquo;s verified UPI ID is connected.
                 </p>
@@ -384,7 +384,7 @@ export function DonationForm() {
               </div>
 
               <div>
-                <p className="text-[0.56rem] uppercase tracking-[0.22em] text-charcoal/40">
+                <p className="text-[0.7rem] tracking-[0.01em] text-charcoal/40">
                   Or transfer directly
                 </p>
                 <div className="mt-4 border-t border-line">
@@ -400,21 +400,21 @@ export function DonationForm() {
                 </div>
 
                 <div className="mt-7 bg-cream p-5">
-                  <p className="text-[0.56rem] uppercase tracking-[0.22em] text-charcoal/40">
+                  <p className="text-[0.7rem] tracking-[0.01em] text-charcoal/40">
                     After you pay
                   </p>
-                  <p className="mt-2 text-sm font-light leading-relaxed text-charcoal/60">
+                  <p className="mt-2 text-sm font-normal leading-relaxed text-charcoal/60">
                     {donation.payment.confirmation}
                   </p>
                   <a
                     href={`mailto:${site.email}?subject=Donation%20reference`}
-                    className="mt-4 inline-flex text-[0.6rem] font-medium uppercase tracking-[0.18em] text-charcoal underline decoration-charcoal/25 underline-offset-4 transition-colors duration-500 hover:text-saffron"
+                    className="mt-4 inline-flex text-[0.8rem] font-medium tracking-[0.01em] text-charcoal underline decoration-charcoal/25 underline-offset-4 transition-colors duration-500 hover:text-saffron"
                   >
                     Send a payment reference
                   </a>
                 </div>
 
-                <p className="mt-4 flex items-start gap-2 text-[0.6rem] font-light leading-relaxed text-charcoal/40">
+                <p className="mt-4 flex items-start gap-2 text-[0.8rem] font-normal leading-relaxed text-charcoal/40">
                   <Lock className="mt-0.5 h-3 w-3 shrink-0" strokeWidth={1.5} />
                   {donation.payment.note}
                 </p>
@@ -424,10 +424,10 @@ export function DonationForm() {
             <div className="border-t border-line bg-charcoal p-6 text-ivory sm:p-9">
               <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
                 <div>
-                  <p className="text-[0.56rem] uppercase tracking-[0.22em] text-gold">
+                  <p className="text-[0.7rem] tracking-[0.01em] text-gold">
                     A note on your offering
                   </p>
-                  <p className="mt-2 max-w-xl text-sm font-light leading-relaxed text-ivory/60">
+                  <p className="mt-2 max-w-xl text-sm font-normal leading-relaxed text-ivory/60">
                     No payment is marked complete on this website. Once the
                     mission confirms your transfer, your offering will be
                     recorded and acknowledged by email.

@@ -69,7 +69,7 @@ export default async function InitiativeDetailPage({
         alt={initiative.imageAlt}
         imageClassName="object-[50%_45%]"
       >
-        <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-3 border-t border-ivory/20 pt-5 text-[0.58rem] uppercase tracking-[0.2em] text-ivory/45">
+        <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-3 border-t border-ivory/20 pt-5 text-[0.7rem] tracking-[0.01em] text-ivory/45">
           <span>{initiative.location}</span>
           <span className="hidden h-3 w-px bg-ivory/20 sm:block" />
           <span>{initiative.category}</span>
@@ -84,7 +84,7 @@ export default async function InitiativeDetailPage({
               <div className="mt-8 hidden lg:block">
                 <Link
                   href="/initiatives"
-                  className="group inline-flex items-center gap-2 text-[0.6rem] uppercase tracking-[0.2em] text-charcoal/45 transition-colors duration-500 hover:text-charcoal"
+                  className="group inline-flex items-center gap-2 text-[0.8rem] tracking-[0.01em] text-charcoal/45 transition-colors duration-500 hover:text-charcoal"
                 >
                   <ArrowLeft
                     className="h-3.5 w-3.5 transition-transform duration-500 group-hover:-translate-x-1"
@@ -118,20 +118,20 @@ export default async function InitiativeDetailPage({
               <p className="font-display text-2xl italic leading-snug text-charcoal/80 sm:text-3xl">
                 &ldquo;{initiative.quote}&rdquo;
               </p>
-              <p className="mt-4 text-[0.56rem] uppercase tracking-[0.22em] text-charcoal/35">
+              <p className="mt-4 text-[0.7rem] tracking-[0.01em] text-charcoal/35">
                 A reflection from the mission
               </p>
             </Reveal>
 
             <Reveal className="mt-12 grid grid-cols-2 gap-6 border-t border-line pt-6 text-sm" delay={0.1}>
               <div>
-                <p className="text-[0.56rem] uppercase tracking-[0.2em] text-charcoal/35">
+                <p className="text-[0.7rem] tracking-[0.01em] text-charcoal/35">
                   Initiative
                 </p>
                 <p className="mt-2 font-display text-xl">{initiative.title}</p>
               </div>
               <div>
-                <p className="text-[0.56rem] uppercase tracking-[0.2em] text-charcoal/35">
+                <p className="text-[0.7rem] tracking-[0.01em] text-charcoal/35">
                   Where
                 </p>
                 <p className="mt-2 font-display text-xl">{initiative.location}</p>
@@ -141,24 +141,24 @@ export default async function InitiativeDetailPage({
 
           <aside className="lg:col-span-2">
             <div className="border-t border-line pt-5 lg:sticky lg:top-32">
-              <p className="text-[0.56rem] uppercase tracking-[0.2em] text-charcoal/35">
+              <p className="text-[0.7rem] tracking-[0.01em] text-charcoal/35">
                 Get involved
               </p>
-              <p className="mt-3 text-xs font-light leading-relaxed text-charcoal/50">
+              <p className="mt-3 text-xs font-normal leading-relaxed text-charcoal/50">
                 Volunteer your time, offer a contribution, or simply come and
                 see the work for yourself.
               </p>
               <div className="mt-5 flex flex-col items-start gap-3">
                 <Link
                   href="/donate"
-                  className="group inline-flex items-center gap-1.5 text-[0.6rem] font-medium uppercase tracking-[0.16em] text-charcoal transition-colors duration-500 hover:text-saffron"
+                  className="group inline-flex items-center gap-1.5 text-[0.8rem] font-medium tracking-[0.01em] text-charcoal transition-colors duration-500 hover:text-saffron"
                 >
                   Donate
                   <ArrowUpRight className="h-3 w-3" strokeWidth={1.5} />
                 </Link>
                 <Link
                   href="/contact"
-                  className="group inline-flex items-center gap-1.5 text-[0.6rem] font-medium uppercase tracking-[0.16em] text-charcoal/60 transition-colors duration-500 hover:text-charcoal"
+                  className="group inline-flex items-center gap-1.5 text-[0.8rem] font-medium tracking-[0.01em] text-charcoal/60 transition-colors duration-500 hover:text-charcoal"
                 >
                   Volunteer
                   <ArrowUpRight className="h-3 w-3" strokeWidth={1.5} />
@@ -193,8 +193,8 @@ export default async function InitiativeDetailPage({
                     className="img-warm object-cover"
                   />
                 </div>
-                <p className="mt-3 text-[0.56rem] uppercase tracking-[0.18em] text-charcoal/40">
-                  {item.alt} · Placeholder photography
+                <p className="mt-3 text-[0.7rem] tracking-[0.01em] text-charcoal/40">
+                  {item.alt}
                 </p>
               </Reveal>
             ))}
@@ -209,7 +209,7 @@ export default async function InitiativeDetailPage({
               <SectionLabel light>Continue</SectionLabel>
             </div>
             <div className="lg:col-span-9">
-              <p className="text-[0.56rem] uppercase tracking-[0.22em] text-ivory/40">
+              <p className="text-[0.7rem] tracking-[0.01em] text-ivory/40">
                 Next initiative
               </p>
               <Link
@@ -224,14 +224,14 @@ export default async function InitiativeDetailPage({
                   strokeWidth={1.25}
                 />
               </Link>
-              <p className="mt-3 max-w-xl text-sm font-light leading-relaxed text-ivory/50">
+              <p className="mt-3 max-w-xl text-sm font-normal leading-relaxed text-ivory/50">
                 {next.excerpt}
               </p>
             </div>
           </div>
 
           <div className="mt-12 flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-center">
-            <p className="max-w-md text-sm font-light leading-relaxed text-ivory/50">
+            <p className="max-w-md text-sm font-normal leading-relaxed text-ivory/50">
               Every contribution becomes a meal, a book, a visit or a tree.
               Thank you for walking with us.
             </p>

@@ -70,22 +70,12 @@ export function ArrowLink({
     <Link
       href={href}
       className={cn(
-        "group inline-flex items-center gap-3 text-[0.7rem] font-medium uppercase tracking-[0.2em]",
-        light ? "text-ivory/80 hover:text-ivory" : "text-charcoal/80 hover:text-charcoal",
+        "link-underline w-fit pb-1 text-[0.92rem]",
+        light ? "text-ivory/80 hover:text-ivory" : "text-charcoal/75 hover:text-charcoal",
         className,
       )}
     >
-      <span className="link-underline pb-1">{children}</span>
-      <span
-        className={cn(
-          "grid h-9 w-9 place-items-center rounded-full border transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:translate-x-1",
-          light
-            ? "border-ivory/25 group-hover:border-gold group-hover:bg-gold group-hover:text-charcoal"
-            : "border-charcoal/20 group-hover:border-charcoal group-hover:bg-charcoal group-hover:text-ivory",
-        )}
-      >
-        <ArrowUpRight className="h-3.5 w-3.5" strokeWidth={1.5} />
-      </span>
+      {children}
     </Link>
   );
 }

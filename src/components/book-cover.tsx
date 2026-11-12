@@ -69,7 +69,7 @@ export function BookCover({
       >
         <div className="flex items-center justify-between">
           <span
-            className="text-[0.5rem] uppercase tracking-[0.3em]"
+            className="text-[0.75rem] tracking-[0.01em]"
             style={{ color: `${theme.accent}cc` }}
           >
             {publication.issue}
@@ -91,13 +91,13 @@ export function BookCover({
             style={{ background: `${theme.accent}66` }}
           />
           <p
-            className="font-display text-3xl font-light leading-none tracking-wide sm:text-4xl"
+            className="font-display text-3xl font-normal leading-none tracking-wide sm:text-4xl"
             style={{ color: "#f4efe4" }}
           >
             {publication.title}
           </p>
           <p
-            className="mt-3 text-[0.5rem] uppercase tracking-[0.24em]"
+            className="mt-3 text-[0.75rem] tracking-[0.01em]"
             style={{ color: `${theme.accent}aa` }}
           >
             Prabhu Prem Mission
@@ -105,7 +105,7 @@ export function BookCover({
         </div>
 
         <div
-          className="flex items-center justify-between border-t pt-4 text-[0.48rem] uppercase tracking-[0.2em]"
+          className="flex items-center justify-between border-t pt-4 text-[0.75rem] tracking-[0.01em]"
           style={{ borderColor: `${theme.accent}33`, color: `${theme.accent}aa` }}
         >
           <span>Monthly</span>

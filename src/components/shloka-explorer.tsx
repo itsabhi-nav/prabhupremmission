@@ -18,7 +18,7 @@ function JapaCounter() {
 
   return (
     <div className="border border-line bg-ivory p-7 text-center sm:p-9">
-      <p className="text-[0.54rem] uppercase tracking-[0.24em] text-charcoal/40">
+      <p className="text-[0.7rem] tracking-[0.01em] text-charcoal/40">
         Japa · माला
       </p>
 
@@ -67,14 +67,14 @@ function JapaCounter() {
         <span className="text-charcoal/25"> / {GOAL}</span>
       </p>
 
-      <p className="mt-2 text-[0.58rem] uppercase tracking-[0.18em] text-charcoal/35">
+      <p className="mt-2 text-[0.7rem] tracking-[0.01em] text-charcoal/35">
         {laps > 0 ? `${laps} mala${laps > 1 ? "s" : ""} complete` : "this mala"}
       </p>
 
       <button
         type="button"
         onClick={() => setCount(0)}
-        className="mt-5 inline-flex items-center gap-2 text-[0.56rem] uppercase tracking-[0.18em] text-charcoal/35 transition-colors duration-500 hover:text-charcoal"
+        className="mt-5 inline-flex items-center gap-2 text-[0.7rem] tracking-[0.01em] text-charcoal/35 transition-colors duration-500 hover:text-charcoal"
       >
         <RotateCcw className="h-3 w-3" strokeWidth={1.5} />
         Begin again
@@ -105,7 +105,7 @@ export function ShlokaExplorer() {
             <JapaCounter />
 
             <div className="mt-10 border-t border-line pt-6">
-              <p className="text-[0.54rem] uppercase tracking-[0.22em] text-charcoal/40">
+              <p className="text-[0.7rem] tracking-[0.01em] text-charcoal/40">
                 Read by theme
               </p>
               <div className="mt-4 flex flex-wrap gap-2">
@@ -115,7 +115,7 @@ export function ShlokaExplorer() {
                     type="button"
                     onClick={() => setFilter(theme)}
                     className={cn(
-                      "rounded-full border px-4 py-2 text-[0.6rem] font-medium uppercase tracking-[0.16em] transition-all duration-400",
+                      "rounded-[2px] border px-4 py-2 text-[0.85rem] transition-colors duration-300",
                       filter === theme
                         ? "border-charcoal bg-charcoal text-ivory"
                         : "border-charcoal/15 text-charcoal/55 hover:border-charcoal/45 hover:text-charcoal",
@@ -125,7 +125,7 @@ export function ShlokaExplorer() {
                   </button>
                 ))}
               </div>
-              <p className="mt-5 text-xs font-light leading-relaxed text-charcoal/40">
+              <p className="mt-5 text-xs font-normal leading-relaxed text-charcoal/40">
                 {filtered.length} verse{filtered.length > 1 ? "s" : ""} in this
                 reading. Open any verse to see it word by word.
               </p>
@@ -144,7 +144,7 @@ export function ShlokaExplorer() {
             ))}
           </div>
 
-          <p className="mt-14 border-t border-line pt-6 text-xs font-light leading-relaxed text-charcoal/40">
+          <p className="mt-14 border-t border-line pt-6 text-xs font-normal leading-relaxed text-charcoal/40">
             Renderings are working translations prepared for this interface.
             Verify each verse against a published edition before printing or
             distributing them.

@@ -17,7 +17,7 @@ export default function NotFound() {
         className="pointer-events-none absolute inset-0"
         style={{
           background:
-            "radial-gradient(90% 70% at 80% 10%, rgba(185,154,99,0.14) 0%, transparent 55%), radial-gradient(70% 60% at 0% 100%, rgba(197,139,69,0.1) 0%, transparent 60%)",
+            "radial-gradient(90% 70% at 80% 10%, rgba(154,132,82,0.12) 0%, transparent 55%), radial-gradient(70% 60% at 0% 100%, rgba(194,67,30,0.09) 0%, transparent 60%)",
         }}
       />
       <p
@@ -30,7 +30,7 @@ export default function NotFound() {
       <div className="container-x relative py-32">
         <div className="flex items-center justify-between gap-6 border-t border-ivory/20 pt-4">
           <p className="eyebrow text-ivory/50">A wrong turn</p>
-          <p className="text-[0.56rem] uppercase tracking-[0.22em] text-ivory/30">
+          <p className="text-[0.7rem] tracking-[0.01em] text-ivory/30">
             Prabhu Prem Mission
           </p>
         </div>
@@ -39,7 +39,7 @@ export default function NotFound() {
           <LogoMark className="h-10 w-10 text-gold" />
           <h1 className="display-1 mt-8 text-balance">
             This path is quiet.{" "}
-            <span className="italic text-gold">Perhaps it is elsewhere.</span>
+            Perhaps it is elsewhere.
           </h1>
           <p className="body-lg mt-6 max-w-lg text-ivory/55">
             The page you were looking for is not here — it may have moved, or it
@@ -51,7 +51,7 @@ export default function NotFound() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="group inline-flex items-center gap-2 text-[0.62rem] font-medium uppercase tracking-[0.18em] text-ivory/65 transition-colors duration-500 hover:text-ivory"
+                className="group inline-flex items-center gap-2 text-[0.8rem] font-medium tracking-[0.01em] text-ivory/65 transition-colors duration-500 hover:text-ivory"
               >
                 <span className="link-underline pb-1">{link.label}</span>
                 <ArrowUpRight

@@ -22,7 +22,7 @@ export function InitiativesIndex({ items }: { items: Initiative[] }) {
   return (
     <div>
       <div className="flex flex-wrap items-center gap-x-6 gap-y-3 border-y border-line py-4">
-        <span className="text-[0.56rem] uppercase tracking-[0.22em] text-charcoal/35">
+        <span className="text-[0.7rem] tracking-[0.01em] text-charcoal/35">
           Filter
         </span>
         {categories.map((category) => (
@@ -31,7 +31,7 @@ export function InitiativesIndex({ items }: { items: Initiative[] }) {
             type="button"
             onClick={() => setActive(category)}
             className={cn(
-              "relative py-1 text-[0.62rem] font-medium uppercase tracking-[0.18em] transition-colors duration-500",
+              "relative py-1 text-[0.8rem] font-medium tracking-[0.01em] transition-colors duration-500",
               active === category
                 ? "text-charcoal"
                 : "text-charcoal/40 hover:text-charcoal/80",
@@ -46,7 +46,7 @@ export function InitiativesIndex({ items }: { items: Initiative[] }) {
             )}
           </button>
         ))}
-        <span className="ml-auto text-[0.56rem] uppercase tracking-[0.18em] text-charcoal/35">
+        <span className="ml-auto text-[0.7rem] tracking-[0.01em] text-charcoal/35">
           {String(filtered.length).padStart(2, "0")} initiatives
         </span>
       </div>
@@ -75,13 +75,13 @@ export function InitiativesIndex({ items }: { items: Initiative[] }) {
                 </div>
                 <div className="mt-5 flex items-start justify-between gap-6 border-t border-line pt-4">
                   <div>
-                    <p className="text-[0.56rem] uppercase tracking-[0.22em] text-charcoal/40">
+                    <p className="text-[0.7rem] tracking-[0.01em] text-charcoal/40">
                       {initiative.category} · {formatDate(initiative.date)}
                     </p>
                     <h3 className="mt-2 font-display text-3xl transition-colors duration-500 group-hover:text-saffron">
                       {initiative.title}
                     </h3>
-                    <p className="mt-2 max-w-[40ch] text-sm font-light leading-relaxed text-charcoal/55">
+                    <p className="mt-2 max-w-[40ch] text-sm font-normal leading-relaxed text-charcoal/55">
                       {initiative.excerpt}
                     </p>
                   </div>

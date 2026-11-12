@@ -31,26 +31,25 @@ export const site = {
 };
 
 export const nav = [
-  { label: "Home", href: "/" },
   { label: "About", href: "/about" },
   { label: "Initiatives", href: "/initiatives" },
-  { label: "Darshan", href: "/darshan" },
-  { label: "Shloka", href: "/shloka" },
+  { label: "Daily Darshan", href: "/darshan" },
   { label: "Gyan", href: "/gyan" },
+  { label: "Utsav", href: "/utsav" },
   { label: "Contact", href: "/contact" },
 ];
 
 export const hero = {
   label: "Prabhu Prem Mission",
-  title: ["Discover the path of", "love, wisdom &", "spiritual awakening."],
+  title: ["Where devotion", "becomes a way of life."],
   intro:
-    "An invitation to experience the timeless wisdom of spirituality, devotion and selfless love.",
-  primaryCta: { label: "Explore our mission", href: "/about" },
-  secondaryCta: { label: "Daily Dham Darshan", href: "/darshan" },
-  image: "/images/hero.jpg",
-  imageAlt: "An ornate South Indian temple gopuram silhouetted against a rose-gold sunset sky",
+    "A spiritual and humanitarian mission rooted in bhakti, service and scripture.",
+  primaryCta: { label: "Visit the Dham", href: "/darshan" },
+  secondaryCta: { label: "Read our story", href: "/about" },
+  image: "/images/ghat.jpg",
+  imageAlt: "Boats and temple spires along the river at Varanasi in the morning light",
   note: "Bharat · India",
-  sanskrit: "श्री राधारमण",
+  sanskrit: "॥ श्री राधारमण ॥",
 };
 
 export const mission = {
@@ -441,6 +440,46 @@ export const featuredVideo = {
   channel: site.socials.youtube,
 };
 
+export const pravachan = {
+  channel: {
+    name: "Prabhu Prem Mission",
+    handle: "@prabhupremmission",
+    description:
+      "Discourses recorded at the Dham — on bhakti, the Gita, and the small disciplines of a devoted life.",
+    image: "/images/darshan-2.jpg",
+  },
+  talks: [
+    {
+      title: "On surrender, and the courage of a quiet heart",
+      deva: "समर्पण",
+      duration: "42 min",
+      youtubeId: "",
+      note: "Latest",
+    },
+    {
+      title: "The worker and the work: reading Gita 2.47",
+      deva: "कर्मयोग",
+      duration: "38 min",
+      youtubeId: "",
+      note: "Karma Yoga",
+    },
+    {
+      title: "Why we light a lamp at dusk",
+      deva: "संध्या दीप",
+      duration: "26 min",
+      youtubeId: "",
+      note: "Ritual",
+    },
+    {
+      title: "A mind that will not sit still",
+      deva: "मनन",
+      duration: "51 min",
+      youtubeId: "",
+      note: "Reflection",
+    },
+  ],
+};
+
 export const donation = {
   eyebrow: "Support the Mission",
   title: "Be a part of something meaningful.",
@@ -553,6 +592,41 @@ export const aboutPage = {
     imageAlt:
       "A monk in maroon robes walking alone along a tree-lined path — representative image",
   },
+};
+
+export const utsav = {
+  eyebrow: "Utsav · The Festival Year",
+  meta: "Computed at the Dham",
+  title: "The year, told in moons.",
+  intro:
+    "Every date here is read from the sky above Vrindavan — the true phase of the moon, the hour of sunrise, the moment of the pūjā. Nothing is copied from a list.",
+  note: "Dates are computed astronomically for the Dham. Local panchang practice may differ by a day; where it does, the temple's own announcement is final.",
+  image: "/images/darshan-7.jpg",
+  imageAlt: "Priests raising aarti lamps in a long row at dusk",
+  imageClassName: "object-[50%_55%]",
+  nextLabel: "The next festival",
+  listEyebrow: "The calendar",
+  listTitle: "A year of light, fast and colour.",
+  observancesTitle: "The quiet rhythm",
+  observancesIntro:
+    "Between the great festivals, the lunar month keeps its own small cadence — Ekadashi, Purnima, Amavasya, Ashtami.",
+  sankalpa: {
+    title: "Make a sankalpa.",
+    body: "Before a festival, many devotees hold a resolve — a fast, a japa count, a quiet promise. Write yours, and keep it somewhere you will see it.",
+    cta: { label: "Write your sankalpa", href: "/sankalpa" },
+  },
+};
+
+export const sankalpaIntro = {
+  eyebrow: "Sankalpa · The Resolve",
+  meta: "A private promise",
+  title: "A vow made quietly, and kept.",
+  intro:
+    "Sankalpa is the resolve taken before a practice — a fast, a japa count, a season of service. Write it here, choose the days, and print a patra to keep.",
+  image: "/images/marigold.jpg",
+  imageAlt: "A tower of marigold and rose offerings beside a small oil lamp",
+  imageClassName: "object-[50%_45%]",
+  note: "This is a personal aid, not a ritual substitute. It is not sent anywhere, and nothing is stored on our servers.",
 };
 
 export const legal = {

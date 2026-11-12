@@ -52,10 +52,10 @@ export function Wordmark({
     <span className={cn("flex items-center gap-3", className)}>
       <LogoMark className={compact ? "h-8 w-8" : "h-9 w-9"} />
       <span className="flex flex-col leading-none">
-        <span className="font-display text-[1.35rem] leading-none tracking-[-0.01em] sm:text-[1.5rem]">
+        <span className="font-display text-[1.5rem] leading-none tracking-[-0.01em] sm:text-[1.7rem]">
           Prabhu Prem
         </span>
-        <span className="mt-1 text-[0.5rem] font-medium uppercase tracking-[0.42em] opacity-70">
+        <span className="mt-1.5 text-[0.8rem] font-medium tracking-[0.08em] opacity-70">
           Mission
         </span>
       </span>

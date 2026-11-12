@@ -51,7 +51,7 @@ export function DarshanArchive({ entries }: { entries: DarshanEntry[] }) {
   return (
     <div>
       <div className="flex flex-wrap items-center gap-x-6 gap-y-3 border-y border-line py-4">
-        <span className="text-[0.56rem] uppercase tracking-[0.22em] text-charcoal/35">
+        <span className="text-[0.7rem] tracking-[0.01em] text-charcoal/35">
           Month
         </span>
         {months.map((label) => (
@@ -63,7 +63,7 @@ export function DarshanArchive({ entries }: { entries: DarshanEntry[] }) {
               setActive(null);
             }}
             className={cn(
-              "relative py-1 text-[0.62rem] font-medium uppercase tracking-[0.18em] transition-colors duration-500",
+              "relative py-1 text-[0.8rem] font-medium tracking-[0.01em] transition-colors duration-500",
               month === label
                 ? "text-charcoal"
                 : "text-charcoal/40 hover:text-charcoal/80",
@@ -78,7 +78,7 @@ export function DarshanArchive({ entries }: { entries: DarshanEntry[] }) {
             )}
           </button>
         ))}
-        <span className="ml-auto text-[0.56rem] uppercase tracking-[0.18em] text-charcoal/35">
+        <span className="ml-auto text-[0.7rem] tracking-[0.01em] text-charcoal/35">
           {String(filtered.length).padStart(2, "0")} entries
         </span>
       </div>
@@ -108,23 +108,23 @@ export function DarshanArchive({ entries }: { entries: DarshanEntry[] }) {
                     sizes="(min-width: 1024px) 30vw, (min-width: 640px) 45vw, 100vw"
                     className="img-warm object-cover transition-transform duration-[1400ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.04]"
                   />
-                  <span className="absolute left-3 top-3 bg-ivory/90 px-2.5 py-1.5 text-[0.5rem] uppercase tracking-[0.18em] text-charcoal/70 backdrop-blur">
+                  <span className="absolute left-3 top-3 bg-ivory/90 px-2.5 py-1.5 text-[0.75rem] tracking-[0.01em] text-charcoal/70 backdrop-blur">
                     {index === 0 && month === months[0] ? "Latest" : entry.weekday}
                   </span>
                   <span className="absolute inset-x-0 bottom-0 flex items-end justify-between gap-4 bg-[linear-gradient(180deg,transparent,rgba(20,19,16,0.72))] p-4 text-ivory">
                     <span className="font-display text-lg leading-tight">
                       {entry.caption}
                     </span>
-                    <span className="shrink-0 font-sans text-2xl font-light leading-none tracking-tight">
+                    <span className="shrink-0 font-sans text-2xl font-normal leading-none tracking-tight">
                       {entry.day}
                     </span>
                   </span>
                 </div>
                 <div className="mt-3 flex items-center justify-between border-t border-line pt-3">
-                  <p className="text-[0.56rem] uppercase tracking-[0.18em] text-charcoal/40">
+                  <p className="text-[0.7rem] tracking-[0.01em] text-charcoal/40">
                     {entry.weekday} · {entry.monthShort} {entry.year}
                   </p>
-                  <span className="text-[0.56rem] uppercase tracking-[0.18em] text-charcoal/30 transition-colors duration-500 group-hover:text-charcoal">
+                  <span className="text-[0.7rem] tracking-[0.01em] text-charcoal/30 transition-colors duration-500 group-hover:text-charcoal">
                     View
                   </span>
                 </div>
@@ -148,7 +148,7 @@ export function DarshanArchive({ entries }: { entries: DarshanEntry[] }) {
           >
             <div className="flex items-center justify-between border-b border-ivory/15 px-5 py-4 text-ivory sm:px-8">
               <div>
-                <p className="text-[0.55rem] uppercase tracking-[0.22em] text-ivory/45">
+                <p className="text-[0.7rem] tracking-[0.01em] text-ivory/45">
                   Daily Dham Darshan
                 </p>
                 <p className="mt-1 font-display text-lg">{current.dateLabel}</p>
@@ -208,11 +208,11 @@ export function DarshanArchive({ entries }: { entries: DarshanEntry[] }) {
                   <p className="font-display text-xl leading-tight">
                     {current.caption}
                   </p>
-                  <p className="mt-1 text-sm font-light text-ivory/50">
+                  <p className="mt-1 text-sm font-normal text-ivory/50">
                     {current.note}
                   </p>
                 </div>
-                <p className="shrink-0 text-[0.55rem] uppercase tracking-[0.2em] text-ivory/35">
+                <p className="shrink-0 text-[0.7rem] tracking-[0.01em] text-ivory/35">
                   {String((active ?? 0) + 1).padStart(2, "0")} /{" "}
                   {String(filtered.length).padStart(2, "0")}
                 </p>

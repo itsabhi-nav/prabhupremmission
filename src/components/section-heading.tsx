@@ -12,14 +12,17 @@ export function SectionLabel({
   return (
     <p
       className={cn(
-        "eyebrow flex items-center gap-3",
-        light ? "text-ivory/45" : "text-charcoal/45",
+        "eyebrow flex items-center gap-2.5",
+        light ? "text-ivory/55" : "text-charcoal/50",
         className,
       )}
     >
       <span
         aria-hidden
-        className={cn("h-px w-7", light ? "bg-gold/60" : "bg-saffron/70")}
+        className={cn(
+          "h-1.5 w-1.5 shrink-0",
+          light ? "bg-gold" : "bg-saffron",
+        )}
       />
       {children}
     </p>

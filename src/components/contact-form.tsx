@@ -62,7 +62,7 @@ export function ContactForm() {
             <Check className="h-5 w-5" strokeWidth={1.5} />
           </span>
           <h2 className="mt-6 font-display text-3xl">Your message is with us.</h2>
-          <p className="mt-3 max-w-md text-sm font-light leading-relaxed text-charcoal/55">
+          <p className="mt-3 max-w-md text-sm font-normal leading-relaxed text-charcoal/55">
             Thank you for writing, {name.split(" ")[0]}. A member of the mission
             will reply to {email} within a few working days. If your message is
             urgent, please call the Dham directly.
@@ -92,14 +92,14 @@ export function ContactForm() {
           transition={{ duration: 0.4 }}
           className="border border-line bg-ivory p-6 sm:p-9 lg:p-10"
         >
-          <p className="text-[0.56rem] uppercase tracking-[0.22em] text-charcoal/40">
+          <p className="text-[0.7rem] tracking-[0.01em] text-charcoal/40">
             Write to us
           </p>
           <h2 className="mt-2 font-display text-3xl">Begin a conversation</h2>
 
           <div className="mt-8 grid gap-6 sm:grid-cols-2">
             <label className="block">
-              <span className="text-[0.56rem] uppercase tracking-[0.2em] text-charcoal/45">
+              <span className="text-[0.7rem] tracking-[0.01em] text-charcoal/45">
                 Your name
               </span>
               <input
@@ -116,7 +116,7 @@ export function ContactForm() {
             </label>
 
             <label className="block">
-              <span className="text-[0.56rem] uppercase tracking-[0.2em] text-charcoal/45">
+              <span className="text-[0.7rem] tracking-[0.01em] text-charcoal/45">
                 Email address
               </span>
               <input
@@ -134,7 +134,7 @@ export function ContactForm() {
           </div>
 
           <label className="mt-6 block">
-            <span className="text-[0.56rem] uppercase tracking-[0.2em] text-charcoal/45">
+            <span className="text-[0.7rem] tracking-[0.01em] text-charcoal/45">
               What is this about?
             </span>
             <select
@@ -151,7 +151,7 @@ export function ContactForm() {
           </label>
 
           <label className="mt-6 block">
-            <span className="text-[0.56rem] uppercase tracking-[0.2em] text-charcoal/45">
+            <span className="text-[0.7rem] tracking-[0.01em] text-charcoal/45">
               Your message
             </span>
             <textarea
@@ -181,7 +181,7 @@ export function ContactForm() {
           </AnimatePresence>
 
           <div className="mt-7 flex flex-col gap-4 border-t border-line pt-6 sm:flex-row sm:items-center sm:justify-between">
-            <p className="max-w-xs text-[0.62rem] font-light leading-relaxed text-charcoal/40">
+            <p className="max-w-xs text-[0.8rem] font-normal leading-relaxed text-charcoal/40">
               Your details are used only to reply to you. Nothing is shared or
               published.
             </p>

@@ -21,7 +21,7 @@ export default function DonatePage() {
         title={
           <>
             Be a part of something{" "}
-            <span className="italic text-gold">meaningful.</span>
+            meaningful.
           </>
         }
         intro={donation.intro}
@@ -50,7 +50,7 @@ export default function DonatePage() {
 
           <aside className="lg:col-span-4 lg:col-start-9 lg:pt-2">
             <div className="border-t border-charcoal/20 pt-5">
-              <p className="text-[0.56rem] uppercase tracking-[0.22em] text-charcoal/40">
+              <p className="text-[0.7rem] tracking-[0.01em] text-charcoal/40">
                 How your offering is held
               </p>
             </div>
@@ -60,14 +60,14 @@ export default function DonatePage() {
                 <Reveal key={item.title} delay={index * 0.05}>
                   <div className="border-b border-line py-5">
                     <div className="flex items-baseline gap-4">
-                      <span className="font-display text-sm italic text-saffron">
+                      <span className="text-[0.8rem] font-medium text-saffron">
                         0{index + 1}
                       </span>
                       <div>
                         <h3 className="text-sm font-normal text-charcoal/90">
                           {item.title}
                         </h3>
-                        <p className="mt-1.5 text-xs font-light leading-relaxed text-charcoal/50">
+                        <p className="mt-1.5 text-xs font-normal leading-relaxed text-charcoal/50">
                           {item.description}
                         </p>
                       </div>
@@ -81,26 +81,26 @@ export default function DonatePage() {
               <p className="font-deva text-xl text-saffron" lang="sa">
                 दानं परमं धर्मः
               </p>
-              <p className="mt-1 text-[0.56rem] uppercase tracking-[0.2em] text-charcoal/40">
+              <p className="mt-1 text-[0.7rem] tracking-[0.01em] text-charcoal/40">
                 Giving is the highest duty
               </p>
-              <p className="mt-3 text-xs font-light leading-relaxed text-charcoal/50">
+              <p className="mt-3 text-xs font-normal leading-relaxed text-charcoal/50">
                 A traditional line the mission returns to. It is offered here as
                 a reflection, not as a claim about outcomes.
               </p>
             </Reveal>
 
             <Reveal className="mt-8 border-t border-line pt-5" delay={0.2}>
-              <p className="text-[0.56rem] uppercase tracking-[0.22em] text-charcoal/40">
+              <p className="text-[0.7rem] tracking-[0.01em] text-charcoal/40">
                 Prefer to give quietly?
               </p>
-              <p className="mt-2 text-xs font-light leading-relaxed text-charcoal/50">
+              <p className="mt-2 text-xs font-normal leading-relaxed text-charcoal/50">
                 Gupta Daan is an offering made without recognition. Tick the box
                 in the form and your name will not be recorded publicly.
               </p>
               <a
                 href="#gupta-daan"
-                className="mt-4 inline-flex text-[0.6rem] font-medium uppercase tracking-[0.18em] text-charcoal underline decoration-charcoal/25 underline-offset-4 transition-colors duration-500 hover:text-saffron"
+                className="mt-4 inline-flex text-[0.8rem] font-medium tracking-[0.01em] text-charcoal underline decoration-charcoal/25 underline-offset-4 transition-colors duration-500 hover:text-saffron"
               >
                 Offer Gupta Daan
               </a>
@@ -139,7 +139,7 @@ export default function DonatePage() {
                 promises to use what it receives carefully.
               </p>
             </div>
-            <p className="mt-8 max-w-md text-xs font-light leading-relaxed text-charcoal/40">
+            <p className="mt-8 max-w-md text-xs font-normal leading-relaxed text-charcoal/40">
               {donation.payment.note}
             </p>
           </div>

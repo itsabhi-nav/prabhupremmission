@@ -35,14 +35,13 @@ export function ShlokaCard({
       <div className="flex items-start justify-between gap-6">
         <div className="min-w-0 flex-1">
           <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
-            <span className="font-display text-sm italic text-saffron">
+            <span className="text-[0.8rem] font-medium text-saffron">
               {String(index + 1).padStart(2, "0")}
             </span>
-            <span className="text-[0.54rem] uppercase tracking-[0.2em] text-charcoal/40">
+            <span className="text-[0.8rem] text-charcoal/45">
               {shloka.source}
             </span>
-            <span className="hidden h-3 w-px bg-line sm:block" />
-            <span className="text-[0.54rem] uppercase tracking-[0.2em] text-charcoal/35">
+            <span className="text-[0.8rem] text-charcoal/35">
               {shloka.theme}
             </span>
           </div>
@@ -79,7 +78,7 @@ export function ShlokaCard({
       </div>
 
       {shloka.note && (
-        <p className="mt-5 text-xs font-light leading-relaxed text-charcoal/40">
+        <p className="mt-5 text-xs font-normal leading-relaxed text-charcoal/40">
           {shloka.note}
         </p>
       )}
@@ -88,7 +87,7 @@ export function ShlokaCard({
         type="button"
         onClick={() => setOpen((value) => !value)}
         aria-expanded={open}
-        className="mt-6 inline-flex items-center gap-2 text-[0.58rem] uppercase tracking-[0.2em] text-charcoal/40 transition-colors duration-500 hover:text-charcoal"
+        className="mt-6 inline-flex items-center gap-2 text-[0.7rem] tracking-[0.01em] text-charcoal/40 transition-colors duration-500 hover:text-charcoal"
       >
         {open ? "Hide the words" : "Word by word"}
         <ChevronDown
@@ -116,11 +115,11 @@ export function ShlokaCard({
                     <span className="deva-display block text-lg text-charcoal/80">
                       {entry.deva}
                     </span>
-                    <span className="mt-0.5 block font-display text-xs italic text-charcoal/35">
+                    <span className="mt-0.5 block text-[0.72rem] text-charcoal/40">
                       {entry.iast}
                     </span>
                   </dt>
-                  <dd className="max-w-[9rem] text-right text-xs font-light leading-relaxed text-charcoal/55">
+                  <dd className="max-w-[9rem] text-right text-xs font-normal leading-relaxed text-charcoal/55">
                     {entry.gloss}
                   </dd>
                 </div>

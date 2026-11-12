@@ -3,8 +3,8 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { AnimatePresence, motion, useScroll } from "framer-motion";
-import { ArrowUpRight, Menu, X } from "lucide-react";
+import { AnimatePresence, motion } from "framer-motion";
+import { Menu, X } from "lucide-react";
 import { nav, site } from "@/content/site";
 import { cn } from "@/lib/utils";
 import { Wordmark } from "@/components/logo";
@@ -16,7 +16,6 @@ export function SiteHeader() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const [activePath, setActivePath] = useState(pathname);
-  const { scrollYProgress } = useScroll();
   const lightHero = !overrideDarkPaths.some((path) => pathname.startsWith(path));
   const solid = scrolled || !lightHero;
 
@@ -47,7 +46,7 @@ export function SiteHeader() {
         className={cn(
           "fixed inset-x-0 top-0 z-50 transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]",
           solid
-            ? "border-b border-line bg-ivory/92 text-charcoal backdrop-blur-xl"
+            ? "border-b border-ivory/10 bg-ink/95 text-ivory backdrop-blur-xl"
             : "border-b border-transparent bg-transparent text-ivory",
         )}
       >
@@ -62,7 +61,7 @@ export function SiteHeader() {
 
           <nav
             aria-label="Primary"
-            className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-5 lg:flex xl:gap-8"
+            className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-4 lg:flex xl:gap-7"
           >
             {nav.map((item) => {
               const active =
@@ -72,15 +71,17 @@ export function SiteHeader() {
                   key={item.href}
                   href={item.href}
                   className={cn(
-                    "group relative py-2 text-[0.63rem] font-medium uppercase tracking-[0.19em] transition-colors duration-500",
+                    "group relative py-2 text-[0.84rem] font-normal transition-colors duration-500",
                     active ? "" : "opacity-70 hover:opacity-100",
                   )}
                 >
                   {item.label}
                   <span
                     className={cn(
-                      "absolute -bottom-0.5 left-0 h-px w-full origin-left bg-current transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]",
-                      active ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100",
+                      "absolute -bottom-0.5 left-0 h-px w-full origin-left transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]",
+                      active
+                        ? "scale-x-100 bg-saffron"
+                        : "scale-x-0 bg-current group-hover:scale-x-100",
                     )}
                   />
                 </Link>
@@ -88,21 +89,15 @@ export function SiteHeader() {
             })}
           </nav>
 
-          <div className="relative z-10 flex items-center gap-4">
+          <div className="relative z-10 flex items-center gap-3 sm:gap-4">
             <Link
               href="/donate"
               className={cn(
-                "group hidden items-center gap-2.5 rounded-full border px-5 py-2.5 text-[0.63rem] font-medium uppercase tracking-[0.18em] transition-all duration-500 sm:inline-flex",
-                solid
-                  ? "border-charcoal bg-charcoal text-ivory hover:border-saffron hover:bg-saffron"
-                  : "border-ivory/35 text-ivory hover:border-ivory hover:bg-ivory hover:text-charcoal",
+                "group hidden items-center gap-2 rounded-[2px] border px-5 py-2.5 text-[0.84rem] font-medium transition-colors duration-300 sm:inline-flex",
+                "border-ivory/35 text-ivory hover:border-ivory hover:bg-ivory hover:text-charcoal",
               )}
             >
               Donate
-              <ArrowUpRight
-                className="h-3 w-3 transition-transform duration-500 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-                strokeWidth={1.5}
-              />
             </Link>
 
             <button
@@ -116,12 +111,6 @@ export function SiteHeader() {
           </div>
         </div>
 
-        {/* scroll progress */}
-        <motion.div
-          aria-hidden
-          style={{ scaleX: scrollYProgress }}
-          className="absolute inset-x-0 bottom-0 h-px origin-left bg-gradient-to-r from-saffron via-gold to-saffron/40"
-        />
       </header>
 
       <AnimatePresence>
@@ -133,26 +122,20 @@ export function SiteHeader() {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
           >
-            <div
-              aria-hidden
-              className="pointer-events-none absolute inset-0 opacity-60"
-              style={{
-                background:
-                  "radial-gradient(120% 80% at 90% 10%, rgba(185,154,99,0.16) 0%, transparent 55%), radial-gradient(90% 70% at 0% 100%, rgba(197,139,69,0.12) 0%, transparent 60%)",
-              }}
-            />
             <div className="container-x relative flex h-[76px] shrink-0 items-center justify-between">
               <Link href="/" onClick={() => setOpen(false)} aria-label={site.name}>
                 <Wordmark />
               </Link>
-              <button
-                type="button"
-                onClick={() => setOpen(false)}
-                aria-label="Close menu"
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-ivory/25 transition-colors duration-500 hover:border-ivory/60"
-              >
-                <X className="h-4 w-4" strokeWidth={1.5} />
-              </button>
+              <div className="flex items-center gap-3">
+                <button
+                  type="button"
+                  onClick={() => setOpen(false)}
+                  aria-label="Close menu"
+                  className="flex h-10 w-10 items-center justify-center rounded-full border border-ivory/25 transition-colors duration-500 hover:border-ivory/60"
+                >
+                  <X className="h-4 w-4" strokeWidth={1.5} />
+                </button>
+              </div>
             </div>
 
             <div className="container-x relative flex flex-1 flex-col justify-between overflow-y-auto pb-8 pt-6">
@@ -176,9 +159,6 @@ export function SiteHeader() {
                       <span className="display-2 leading-none transition-colors duration-500 group-hover:text-gold">
                         {item.label}
                       </span>
-                      <span className="text-[0.6rem] tracking-[0.2em] text-ivory/40">
-                        0{index + 1}
-                      </span>
                     </Link>
                   </motion.div>
                 ))}
@@ -190,10 +170,10 @@ export function SiteHeader() {
                 transition={{ delay: 0.4, duration: 0.7 }}
                 className="mt-10 flex flex-col gap-6 border-t border-line-light pt-6 sm:flex-row sm:items-end sm:justify-between"
               >
-                <div className="space-y-1 text-sm font-light text-ivory/60">
+                <div className="space-y-1 text-sm font-normal text-ivory/60">
                   <p>{site.email}</p>
                   <p>{site.phone}</p>
-                  <p className="pt-2 text-[0.6rem] uppercase tracking-[0.2em] text-ivory/35">
+                  <p className="pt-2 text-[0.8rem] text-ivory/40">
                     {site.address.line1} · {site.address.line2}
                   </p>
                 </div>
@@ -203,7 +183,6 @@ export function SiteHeader() {
                   className="btn btn-outline-light w-fit"
                 >
                   Offer a contribution
-                  <ArrowUpRight className="h-3.5 w-3.5" strokeWidth={1.5} />
                 </Link>
               </motion.div>
             </div>

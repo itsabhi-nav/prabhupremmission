@@ -43,7 +43,7 @@ export default function ContactPage() {
         meta="Vrindavan · India"
         title={
           <>
-            Come, <span className="italic text-gold">sit with us.</span>
+            Come, sit with us.
           </>
         }
         intro={contactPage.intro}
@@ -63,7 +63,7 @@ export default function ContactPage() {
 
           <aside className="lg:col-span-4 lg:col-start-9">
             <div className="border-t border-charcoal/20 pt-5">
-              <p className="text-[0.56rem] uppercase tracking-[0.22em] text-charcoal/40">
+              <p className="text-[0.7rem] tracking-[0.01em] text-charcoal/40">
                 The Dham
               </p>
             </div>
@@ -75,7 +75,7 @@ export default function ContactPage() {
                   <p className="text-sm text-charcoal/85">
                     {site.address.line1}
                   </p>
-                  <p className="mt-1 text-xs font-light leading-relaxed text-charcoal/50">
+                  <p className="mt-1 text-xs font-normal leading-relaxed text-charcoal/50">
                     {site.address.line2}
                     <br />
                     {site.address.country}
@@ -92,7 +92,7 @@ export default function ContactPage() {
                   >
                     {site.email}
                   </a>
-                  <p className="mt-1 text-xs font-light text-charcoal/45">
+                  <p className="mt-1 text-xs font-normal text-charcoal/45">
                     For general enquiries
                   </p>
                 </div>
@@ -107,9 +107,6 @@ export default function ContactPage() {
                   >
                     {site.phone}
                   </a>
-                  <p className="mt-1 text-xs font-light text-charcoal/45">
-                    Placeholder number
-                  </p>
                 </div>
               </div>
 
@@ -117,7 +114,7 @@ export default function ContactPage() {
                 <Clock className="mt-0.5 h-4 w-4 shrink-0 text-saffron" strokeWidth={1.5} />
                 <div>
                   <p className="text-sm text-charcoal/85">{contactPage.hours}</p>
-                  <p className="mt-1 text-xs font-light text-charcoal/45">
+                  <p className="mt-1 text-xs font-normal text-charcoal/45">
                     Aarti · 5:30 am &amp; 6:30 pm (placeholder)
                   </p>
                 </div>
@@ -125,7 +122,7 @@ export default function ContactPage() {
             </div>
 
             <Reveal className="mt-8 border-t border-line pt-5" delay={0.08}>
-              <p className="text-[0.56rem] uppercase tracking-[0.22em] text-charcoal/40">
+              <p className="text-[0.7rem] tracking-[0.01em] text-charcoal/40">
                 Follow the mission
               </p>
               <ul className="mt-4 space-y-2.5">
@@ -138,7 +135,7 @@ export default function ContactPage() {
                       className="group flex items-center justify-between gap-4 text-sm text-charcoal/70 transition-colors duration-500 hover:text-charcoal"
                     >
                       <span>{social.label}</span>
-                      <span className="flex items-center gap-2 text-[0.6rem] uppercase tracking-[0.14em] text-charcoal/35">
+                      <span className="flex items-center gap-2 text-[0.8rem] tracking-[0.01em] text-charcoal/35">
                         {social.handle}
                         <ArrowUpRight
                           className="h-3 w-3 transition-transform duration-500 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
@@ -173,7 +170,7 @@ export default function ContactPage() {
                     <h3 className="text-sm font-normal text-charcoal/90">
                       {item.title}
                     </h3>
-                    <p className="mt-1.5 max-w-md text-xs font-light leading-relaxed text-charcoal/55">
+                    <p className="mt-1.5 max-w-md text-xs font-normal leading-relaxed text-charcoal/55">
                       {item.body}
                     </p>
                   </div>
@@ -193,7 +190,7 @@ export default function ContactPage() {
               />
               <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(20,19,16,0.25)_0%,rgba(20,19,16,0.55)_100%)]" />
               <div className="absolute inset-0 flex flex-col items-start justify-between p-6 sm:p-9">
-                <span className="flex items-center gap-2 bg-ivory/90 px-3 py-2 text-[0.52rem] uppercase tracking-[0.2em] text-charcoal/70 backdrop-blur">
+                <span className="flex items-center gap-2 bg-ivory/90 px-3 py-2 text-[0.7rem] tracking-[0.01em] text-charcoal/70 backdrop-blur">
                   <span className="h-1.5 w-1.5 rounded-full bg-saffron" />
                   Vrindavan, Uttar Pradesh
                 </span>
@@ -201,7 +198,7 @@ export default function ContactPage() {
                   <p className="font-display text-2xl leading-tight sm:text-3xl">
                     The mission sits a short walk from the old town.
                   </p>
-                  <p className="mt-2 text-xs font-light leading-relaxed text-ivory/60">
+                  <p className="mt-2 text-xs font-normal leading-relaxed text-ivory/60">
                     {contactPage.mapNote}
                   </p>
                 </div>
@@ -216,7 +213,7 @@ export default function ContactPage() {
           <div>
             <SectionLabel light>Or simply arrive</SectionLabel>
             <h2 className="display-2 mt-6 max-w-xl text-balance">
-              The door is open, <span className="italic text-gold">as you are.</span>
+              The door is open, as you are.
             </h2>
           </div>
           <div className="flex flex-wrap gap-3">

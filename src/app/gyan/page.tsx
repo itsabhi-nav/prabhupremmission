@@ -25,7 +25,7 @@ export default function GyanPage() {
         meta="Publications & teachings"
         title={
           <>
-            Words to <span className="italic text-gold">carry with you.</span>
+            Words to carry with you.
           </>
         }
         intro={gyanSection.intro}
@@ -41,22 +41,19 @@ export default function GyanPage() {
               <Reveal>
                 <BookCover publication={featured} className="mx-auto max-w-[340px] lg:mx-0" />
               </Reveal>
-              <p className="mt-5 text-center text-[0.54rem] uppercase tracking-[0.2em] text-charcoal/35 lg:text-left">
-                Cover design · Placeholder
-              </p>
             </div>
 
             <div className="lg:col-span-6 lg:col-start-7 lg:pt-6">
               <SectionLabel>Latest publication</SectionLabel>
               <Reveal delay={0.08}>
-                <p className="mt-6 text-[0.56rem] uppercase tracking-[0.22em] text-charcoal/40">
+                <p className="mt-6 text-[0.7rem] tracking-[0.01em] text-charcoal/40">
                   {featured.issue} · {formatDate(featured.date)}
                 </p>
                 <h2 className="display-1 mt-4">{featured.title}</h2>
                 <p className="mt-2 font-deva text-2xl text-saffron/80" lang="sa">
                   {featured.sanskrit}
                 </p>
-                <p className="mt-2 text-sm uppercase tracking-[0.16em] text-charcoal/40">
+                <p className="mt-2 text-sm tracking-[0.01em] text-charcoal/40">
                   {featured.subtitle}
                 </p>
 
@@ -64,7 +61,7 @@ export default function GyanPage() {
                   {featured.description}
                 </p>
 
-                <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3 border-y border-line py-4 text-[0.56rem] uppercase tracking-[0.16em] text-charcoal/40">
+                <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3 border-y border-line py-4 text-[0.7rem] tracking-[0.01em] text-charcoal/40">
                   <span>{featured.pages} pages</span>
                   <span className="h-3 w-px bg-line" />
                   <span>PDF · Free to read</span>
@@ -86,16 +83,15 @@ export default function GyanPage() {
                   </a>
                   <Link
                     href="/donate"
-                    className="group inline-flex items-center gap-2 text-[0.62rem] font-medium uppercase tracking-[0.18em] text-charcoal/60 transition-colors duration-500 hover:text-charcoal"
+                    className="group inline-flex items-center gap-2 text-[0.8rem] font-medium tracking-[0.01em] text-charcoal/60 transition-colors duration-500 hover:text-charcoal"
                   >
                     <span className="link-underline pb-1">Support the publications</span>
                     <ArrowUpRight className="h-3 w-3" strokeWidth={1.5} />
                   </Link>
                 </div>
 
-                <p className="mt-6 max-w-md text-xs font-light leading-relaxed text-charcoal/40">
-                  Placeholder PDF. The mission&apos;s actual publications will
-                  replace these files before launch.
+                <p className="mt-6 max-w-md text-[0.82rem] font-normal leading-relaxed text-charcoal/45">
+                  The full text will be available here soon.
                 </p>
               </Reveal>
             </div>
@@ -130,7 +126,7 @@ export default function GyanPage() {
                   className="group grid gap-6 border-b border-line py-8 md:grid-cols-12 md:items-center"
                 >
                   <div className="md:col-span-1">
-                    <p className="font-display text-sm italic text-saffron">
+                    <p className="text-[0.8rem] font-medium text-saffron">
                       {String(index + 2).padStart(2, "0")}
                     </p>
                   </div>
@@ -143,7 +139,7 @@ export default function GyanPage() {
                   </div>
 
                   <div className="md:col-span-5">
-                    <p className="text-[0.54rem] uppercase tracking-[0.2em] text-charcoal/35">
+                    <p className="text-[0.7rem] tracking-[0.01em] text-charcoal/35">
                       {publication.issue} · {formatDate(publication.date)}
                     </p>
                     <h3 className="mt-2 font-display text-3xl leading-tight transition-colors duration-500 group-hover:text-saffron">
@@ -152,17 +148,17 @@ export default function GyanPage() {
                     <p className="mt-1 font-deva text-base text-saffron/70" lang="sa">
                       {publication.sanskrit}
                     </p>
-                    <p className="mt-3 max-w-lg text-sm font-light leading-relaxed text-charcoal/55">
+                    <p className="mt-3 max-w-lg text-sm font-normal leading-relaxed text-charcoal/55">
                       {publication.description}
                     </p>
                   </div>
 
                   <div className="flex items-center justify-between gap-4 md:col-span-4 md:justify-end">
                     <div className="text-right">
-                      <p className="text-[0.54rem] uppercase tracking-[0.18em] text-charcoal/35">
+                      <p className="text-[0.7rem] tracking-[0.01em] text-charcoal/35">
                         {publication.pages} pages
                       </p>
-                      <p className="mt-1 text-[0.54rem] uppercase tracking-[0.18em] text-charcoal/35">
+                      <p className="mt-1 text-[0.7rem] tracking-[0.01em] text-charcoal/35">
                         {publication.subtitle}
                       </p>
                     </div>
@@ -193,7 +189,7 @@ export default function GyanPage() {
           </div>
           <div className="lg:col-span-6 lg:col-start-7 lg:pt-8">
             <NewsletterForm />
-            <p className="mt-4 text-[0.62rem] font-light tracking-wide text-charcoal/40">
+            <p className="mt-4 text-[0.8rem] font-normal tracking-wide text-charcoal/40">
               {newsletter.note}
             </p>
           </div>

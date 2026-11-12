@@ -2,7 +2,8 @@
 
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { ArrowRight, Check } from "lucide-react";
+import { Check } from "lucide-react";
+import { site } from "@/content/site";
 import { cn } from "@/lib/utils";
 
 export function NewsletterForm({
@@ -45,7 +46,7 @@ export function NewsletterForm({
           >
             <span
               className={cn(
-                "mt-0.5 grid h-9 w-9 shrink-0 place-items-center rounded-full",
+                "mt-0.5 grid h-9 w-9 shrink-0 place-items-center rounded-[2px]",
                 dark ? "bg-gold text-charcoal" : "bg-charcoal text-ivory",
               )}
             >
@@ -53,7 +54,7 @@ export function NewsletterForm({
             </span>
             <div>
               <p className={cn("font-display text-2xl", dark ? "text-ivory" : "text-charcoal")}>
-                You are on the list.
+                Thank you for your interest.
               </p>
               <p
                 className={cn(
@@ -61,7 +62,15 @@ export function NewsletterForm({
                   dark ? "text-ivory/55" : "text-charcoal/60",
                 )}
               >
-                A quiet letter will find you at the beginning of each month.
+                This preview is not connected to an email list yet. To
+                subscribe, please{" "}
+                <a
+                  href={`mailto:${site.email}`}
+                  className="underline decoration-current/40 underline-offset-4 transition-colors hover:text-saffron"
+                >
+                  write to the mission
+                </a>
+                .
               </p>
             </div>
           </motion.div>
@@ -79,8 +88,8 @@ export function NewsletterForm({
               <label className="block">
                 <span
                   className={cn(
-                    "mb-1 block text-[0.58rem] uppercase tracking-[0.22em]",
-                    dark ? "text-ivory/40" : "text-charcoal/45",
+                    "mb-1 block text-[0.74rem]",
+                    dark ? "text-ivory/45" : "text-charcoal/50",
                   )}
                 >
                   Your name
@@ -98,8 +107,8 @@ export function NewsletterForm({
               <label className="block">
                 <span
                   className={cn(
-                    "mb-1 block text-[0.58rem] uppercase tracking-[0.22em]",
-                    dark ? "text-ivory/40" : "text-charcoal/45",
+                    "mb-1 block text-[0.74rem]",
+                    dark ? "text-ivory/45" : "text-charcoal/50",
                   )}
                 >
                   Email address
@@ -117,19 +126,13 @@ export function NewsletterForm({
 
               <button
                 type="submit"
-                aria-label="Subscribe to the newsletter"
+                aria-label="Subscribe to the monthly letter"
                 className={cn(
-                  "group flex h-[3.1rem] items-center justify-center gap-3 self-end rounded-full border px-6 text-[0.62rem] font-medium uppercase tracking-[0.18em] transition-all duration-500",
-                  dark
-                    ? "border-ivory/30 text-ivory hover:border-gold hover:bg-gold hover:text-charcoal"
-                    : "border-charcoal bg-charcoal text-ivory hover:border-saffron hover:bg-saffron",
+                  "btn self-end",
+                  dark ? "btn-outline-light" : "btn-solid",
                 )}
               >
                 Subscribe
-                <ArrowRight
-                  className="h-3.5 w-3.5 transition-transform duration-500 group-hover:translate-x-1"
-                  strokeWidth={1.5}
-                />
               </button>
             </div>
             <AnimatePresence>
